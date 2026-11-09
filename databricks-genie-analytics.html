@@ -125,7 +125,58 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
  .project-link {font-size:.92rem;padding:5px 0 0}
  .detail-shell {padding-top:22px}
 }
-.architecture-image{display:block;width:100%;max-width:760px;height:auto;margin:12px auto 0;border:1px solid #294553;border-radius:14px}@media(max-width:600px){.architecture-image{width:100%;border-radius:10px}}</style>
+
+/* Mobile architecture: stack the original workflow nodes vertically */
+@media (max-width: 600px) {
+  .architecture .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    overflow: visible;
+    padding: 4px 0 8px;
+    max-width: 100%;
+  }
+  .architecture .flow .node {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+  }
+  .architecture .flow .node b {
+    font-size: .9rem;
+    line-height: 1.35;
+  }
+  .architecture .flow .node small {
+    font-size: .76rem;
+  }
+  .architecture .flow .arrow {
+    display: block;
+    align-self: center;
+    flex: 0 0 auto;
+    line-height: 1;
+    font-size: 0;
+    width: 2px;
+    height: 17px;
+    background: var(--teal);
+    position: relative;
+    margin: 1px 0;
+    transform: none;
+  }
+  .architecture .flow .arrow::after {
+    content: "";
+    position: absolute;
+    left: -4px;
+    bottom: -1px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid var(--teal);
+  }
+}
+
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -136,6 +187,7 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
 </nav>
 </div>
 </header>
+
 <main><section class="wrap detail-shell"><a class="detail-back" href="index.html#projects">← Back to projects</a><p class="detail-intro">Project overview, architecture and implementation details.</p><article class="panel project">
 <div class="meta">EY · OCT 2025–PRESENT</div>
 <h3>Natural-Language Analytics with Databricks Genie</h3>
@@ -147,9 +199,15 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
 </div>
 <div class="architecture">
 <div class="architecture-title"><strong>High-level architecture</strong><span>Curated data → natural-language analytics</span></div>
-
+<div class="flow">
+<div class="node gold"><b>Gold Delta tables</b><small>Curated analytical datasets</small></div><span class="arrow">→</span>
+<div class="node ai"><b>Genie space</b><small>Descriptions, instructions, sample SQL</small></div><span class="arrow">→</span>
+<div class="node"><b>Business user</b><small>Natural-language question</small></div><span class="arrow">→</span>
+<div class="node silver"><b>Generated SQL</b><small>Query against curated tables</small></div><span class="arrow">→</span>
+<div class="node"><b>Answer</b><small>Query result</small></div>
+</div>
 <p class="architecture-note">Manual validation is a separate activity performed by reviewing generated SQL and comparing returned results with expected outputs.</p>
-<img alt="Static solution architecture diagram" class="architecture-image" loading="lazy" src="databricks-genie-analytics-architecture.svg"/></div>
+</div>
 <div class="project-grid">
 <div><h4>Design decisions</h4><ul><li>Grounded Genie on curated Gold tables rather than raw datasets.</li><li>Configured table descriptions and business instructions to provide dataset context.</li><li>Added representative SQL examples to guide query generation.</li></ul></div>
 <div><h4>Query validation</h4><ul><li>Manually reviewed generated SQL against business requirements.</li><li>Compared execution results with expected outputs to identify incorrect filters, aggregations or calculations.</li></ul></div>
