@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="806" viewBox="0 0 760 806" role="img">
+<title>Databricks Genie Analytics architecture</title>
+<desc>Draw.io-style architecture flow diagram with connected process and data-store nodes.</desc>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0 L0 6 L8 3Z" fill="#58d6c5"/></marker><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity=".22"/></filter></defs>
+<rect width="760" height="806" rx="22" fill="#0d1821"/>
+<text x="55" y="38" fill="#65d8c8" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.2">SOLUTION ARCHITECTURE</text>
+<g filter="url(#sh)"><path d="M55.0 86 Q380.0 67 705.0 86 L705.0 150 Q380.0 169 55.0 150Z" fill="#173342" stroke="#4b8190" stroke-width="2"/><ellipse cx="380.0" cy="86" rx="325.0" ry="14" fill="#1d4050" stroke="#58d6c5" stroke-width="2"/></g>
+<text x="380.0" y="110" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Gold Delta tables</text>
+<text x="380.0" y="139" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Curated analytical datasets</text>
+<text x="695" y="92" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DATA STORE</text>
+<path d="M380.0 169 V189" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="202" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="202" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="240" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Databricks Genie space</text>
+<text x="380.0" y="269" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Descriptions, instructions and sample SQL</text>
+<text x="695" y="222" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 299 V319" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="332" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="332" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="370" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Business user</text>
+<text x="380.0" y="399" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Natural-language question</text>
+<text x="695" y="352" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 429 V449" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="462" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="462" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="500" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Generated SQL</text>
+<text x="380.0" y="529" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Query against curated tables</text>
+<text x="695" y="482" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 559 V579" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="592" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="592" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="630" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Answer</text>
+<text x="380.0" y="659" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Query result</text>
+<text x="695" y="612" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+</svg>

@@ -125,7 +125,7 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
  .project-link {font-size:.92rem;padding:5px 0 0}
  .detail-shell {padding-top:22px}
 }
-</style>
+.architecture-image{display:block;width:100%;max-width:760px;height:auto;margin:12px auto 0;border:1px solid #294553;border-radius:14px}@media(max-width:600px){.architecture-image{width:100%;border-radius:10px}}</style>
 </head>
 <body>
 <header class="topbar">
@@ -136,7 +136,6 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
 </nav>
 </div>
 </header>
-
 <main><section class="wrap detail-shell"><a class="detail-back" href="index.html#projects">← Back to projects</a><p class="detail-intro">Project overview, architecture and implementation details.</p><article class="panel project">
 <div class="meta">SYSTECH SOLUTIONS · OCT 2022–JUL 2023</div>
 <h3>Media Analytics with dbt, Airflow &amp; Redshift</h3>
@@ -148,19 +147,10 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
 </div>
 <div class="architecture">
 <div class="architecture-title"><strong>High-level architecture</strong><span>File and API ingestion → analytics → Redshift</span></div>
-<div class="flow">
-<div class="node"><b>Media sources</b><small>Nielsen, Amagi and FAST channel data</small></div><span class="arrow">→</span>
-<div class="node"><b>Amazon S3</b><small>Source files</small></div><span class="arrow">→</span>
-<div class="node bronze"><b>Redshift raw</b><small>S3 files loaded into raw tables</small></div><span class="arrow">→</span>
-<div class="node silver"><b>dbt staging</b><small>Staging transformations</small></div>
-</div>
-<div class="flow">
-<div class="node ai"><b>Databricks API integration</b><small>Connects to source APIs</small></div><span class="arrow">→</span>
-<div class="node"><b>Databricks Gold notebooks</b><small>Gold-layer processing</small></div><span class="arrow">→</span>
-<div class="node gold"><b>Amazon Redshift Gold</b><small>Gold analytical outputs</small></div>
-</div>
+
+
 <p class="architecture-note">S3 files are loaded into Redshift raw tables and transformed through dbt staging models. Databricks notebooks handle Gold-layer processing and source API integration, with Gold outputs stored in Redshift. Airflow schedules and sequences workflow tasks through DAG dependencies; data does not physically flow through Airflow.</p>
-</div>
+<img alt="Static solution architecture diagram" class="architecture-image" loading="lazy" src="media-analytics-engineering-architecture.svg"/></div>
 <div class="project-grid">
 <div><h4>Design decisions</h4><ul><li>Used dbt staging models to structure source data before Gold-layer processing.</li><li>Used Databricks notebooks for Gold processing and source API integration, with outputs stored in Redshift.</li><li>Used Airflow DAGs for scheduled execution and task dependencies.</li></ul></div>
 <div><h4>Data quality</h4><ul><li>dbt uniqueness tests on configured key columns.</li><li>dbt not-null tests on required columns.</li></ul></div>

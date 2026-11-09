@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1066" viewBox="0 0 760 1066" role="img">
+<title>Media Analytics Engineering architecture</title>
+<desc>Draw.io-style architecture flow diagram with connected process and data-store nodes.</desc>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0 L0 6 L8 3Z" fill="#58d6c5"/></marker><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity=".22"/></filter></defs>
+<rect width="760" height="1066" rx="22" fill="#0d1821"/>
+<text x="55" y="38" fill="#65d8c8" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.2">SOLUTION ARCHITECTURE</text>
+<rect x="55.0" y="72" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="72" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="110" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Media sources</text>
+<text x="380.0" y="139" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Nielsen, Amagi and FAST channel data</text>
+<text x="695" y="92" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 169 V189" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="202" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="202" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="240" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Amazon S3</text>
+<text x="380.0" y="269" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Source files</text>
+<text x="695" y="222" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 299 V319" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<g filter="url(#sh)"><path d="M55.0 346 Q380.0 327 705.0 346 L705.0 410 Q380.0 429 55.0 410Z" fill="#173342" stroke="#4b8190" stroke-width="2"/><ellipse cx="380.0" cy="346" rx="325.0" ry="14" fill="#1d4050" stroke="#58d6c5" stroke-width="2"/></g>
+<text x="380.0" y="370" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Amazon Redshift raw</text>
+<text x="380.0" y="399" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">S3 files loaded into raw tables</text>
+<text x="695" y="352" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DATA STORE</text>
+<path d="M380.0 429 V449" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="462" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="462" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="500" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">dbt staging &amp; marts</text>
+<text x="380.0" y="529" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Staging and mart transformations</text>
+<text x="695" y="482" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 559 V579" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="592" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="592" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="630" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Source API integration</text>
+<text x="380.0" y="659" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">API data ingested through Databricks</text>
+<text x="695" y="612" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 689 V709" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="722" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="722" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="760" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Databricks Gold notebooks</text>
+<text x="380.0" y="789" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Gold-layer processing</text>
+<text x="695" y="742" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 819 V839" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<g filter="url(#sh)"><path d="M55.0 866 Q380.0 847 705.0 866 L705.0 930 Q380.0 949 55.0 930Z" fill="#173342" stroke="#4b8190" stroke-width="2"/><ellipse cx="380.0" cy="866" rx="325.0" ry="14" fill="#1d4050" stroke="#58d6c5" stroke-width="2"/></g>
+<text x="380.0" y="890" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Amazon Redshift Gold</text>
+<text x="380.0" y="919" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Gold analytical outputs</text>
+<text x="695" y="872" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DATA STORE</text>
+</svg>

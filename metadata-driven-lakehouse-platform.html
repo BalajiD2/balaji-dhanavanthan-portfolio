@@ -125,7 +125,7 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
  .project-link {font-size:.92rem;padding:5px 0 0}
  .detail-shell {padding-top:22px}
 }
-</style>
+.architecture-image{display:block;width:100%;max-width:760px;height:auto;margin:12px auto 0;border:1px solid #294553;border-radius:14px}@media(max-width:600px){.architecture-image{width:100%;border-radius:10px}}</style>
 </head>
 <body>
 <header class="topbar">
@@ -136,7 +136,6 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
 </nav>
 </div>
 </header>
-
 <main><section class="wrap detail-shell"><a class="detail-back" href="index.html#projects">← Back to projects</a><p class="detail-intro">Project overview, architecture and implementation details.</p><article class="panel project">
 <div class="meta">EY · OCT 2025–PRESENT</div>
 <div class="project-top"><div><h3>Metadata-Driven Lakehouse Platform</h3><p class="project-summary">A configuration-driven ingestion framework combining automated file collection, Azure Data Factory orchestration and Databricks processing across a Bronze, Silver and Gold Lakehouse.</p></div></div>
@@ -147,21 +146,10 @@ p, li, h1, h2, h3, h4, a, small, strong { overflow-wrap: anywhere; }
 </div>
 <div class="architecture">
 <div class="architecture-title"><strong>High-level architecture</strong><span>File collection → ingestion → Lakehouse</span></div>
-<div class="flow">
-<div class="node"><b>Email &amp; configured sources</b><small>Incoming files and attachments</small></div><span class="arrow">→</span>
-<div class="node"><b>Power Automate</b><small>Extract and place files</small></div><span class="arrow">→</span>
-<div class="node"><b>Landing zone</b><small>Incoming file handoff</small></div><span class="arrow">→</span>
-<div class="node"><b>Azure Data Factory</b><small>Metadata-driven orchestration and Bronze load</small></div><span class="arrow">→</span>
-<div class="node bronze"><b>Bronze Delta</b><small>Raw data loaded through ADF</small></div>
-</div>
-<div class="flow">
-<div class="node"><b>Databricks Auto Loader</b><small>Silver-layer loading</small></div><span class="arrow">→</span>
-<div class="node silver"><b>Silver Delta</b><small>PySpark cleansing and transformations</small></div><span class="arrow">→</span>
-<div class="node ai"><b>Databricks Gold scripts</b><small>Created in Databricks; scheduled by ADF</small></div><span class="arrow">→</span>
-<div class="node gold"><b>Gold Delta</b><small>Curated analytical datasets</small></div>
-</div>
+
+
 <p class="architecture-note">ADF loads Bronze and schedules the Databricks Gold scripts. Auto Loader is shown in the Silver-layer loading flow, as described for this project.</p>
-</div>
+<img alt="Static solution architecture diagram" class="architecture-image" loading="lazy" src="metadata-driven-lakehouse-platform-architecture.svg"/></div>
 <div class="project-grid">
 <div><h4>Design decisions</h4><ul><li>Metadata-driven onboarding to reduce the need for source-specific pipeline code.</li><li>Power Automate for file collection into a designated landing zone.</li><li>Auto Loader with checkpointing for incremental file ingestion.</li><li>Delta Lake for reliable table operations and schema enforcement.</li></ul></div>
 <div><h4>Engineering considerations</h4><ul><li><b>Data quality:</b> Specific validation methods not yet documented.</li><li><b>Error handling:</b> Retry, quarantine and recovery mechanisms need confirmation.</li><li><b>Monitoring:</b> Actual monitoring and alerting mechanisms need confirmation.</li><li><b>Performance:</b> Only verified optimization techniques should be added.</li></ul></div>

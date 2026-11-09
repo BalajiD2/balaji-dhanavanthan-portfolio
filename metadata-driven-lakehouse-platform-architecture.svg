@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1326" viewBox="0 0 760 1326" role="img">
+<title>Metadata Driven Lakehouse Platform architecture</title>
+<desc>Draw.io-style architecture flow diagram with connected process and data-store nodes.</desc>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0 L0 6 L8 3Z" fill="#58d6c5"/></marker><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity=".22"/></filter></defs>
+<rect width="760" height="1326" rx="22" fill="#0d1821"/>
+<text x="55" y="38" fill="#65d8c8" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.2">SOLUTION ARCHITECTURE</text>
+<rect x="55.0" y="72" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="72" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="110" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Email &amp; configured sources</text>
+<text x="380.0" y="139" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Incoming files and attachments</text>
+<text x="695" y="92" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 169 V189" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="202" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="202" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="240" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Power Automate</text>
+<text x="380.0" y="269" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Extracts files and places them in landing zone</text>
+<text x="695" y="222" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 299 V319" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="332" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="332" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="370" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Landing zone</text>
+<text x="380.0" y="399" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Incoming file handoff</text>
+<text x="695" y="352" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 429 V449" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="462" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="462" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="500" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Azure Data Factory</text>
+<text x="380.0" y="529" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Metadata-driven orchestration and Bronze load</text>
+<text x="695" y="482" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 559 V579" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<g filter="url(#sh)"><path d="M55.0 606 Q380.0 587 705.0 606 L705.0 670 Q380.0 689 55.0 670Z" fill="#173342" stroke="#4b8190" stroke-width="2"/><ellipse cx="380.0" cy="606" rx="325.0" ry="14" fill="#1d4050" stroke="#58d6c5" stroke-width="2"/></g>
+<text x="380.0" y="630" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Bronze Delta</text>
+<text x="380.0" y="659" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Raw data loaded through ADF</text>
+<text x="695" y="612" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DATA STORE</text>
+<path d="M380.0 689 V709" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="722" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="722" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="760" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Databricks Auto Loader</text>
+<text x="380.0" y="789" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Silver-layer loading</text>
+<text x="695" y="742" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 819 V839" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<g filter="url(#sh)"><path d="M55.0 866 Q380.0 847 705.0 866 L705.0 930 Q380.0 949 55.0 930Z" fill="#173342" stroke="#4b8190" stroke-width="2"/><ellipse cx="380.0" cy="866" rx="325.0" ry="14" fill="#1d4050" stroke="#58d6c5" stroke-width="2"/></g>
+<text x="380.0" y="890" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Silver Delta</text>
+<text x="380.0" y="919" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">PySpark cleansing and transformations</text>
+<text x="695" y="872" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DATA STORE</text>
+<path d="M380.0 949 V969" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="55.0" y="982" width="650" height="92" rx="14" fill="#162936" stroke="#426171" stroke-width="2" filter="url(#sh)"/><rect x="55.0" y="982" width="7" height="92" rx="3" fill="#58d6c5"/>
+<text x="380.0" y="1020" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Databricks Gold scripts</text>
+<text x="380.0" y="1049" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Created in Databricks; scheduled by ADF</text>
+<text x="695" y="1002" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">PROCESS</text>
+<path d="M380.0 1079 V1099" stroke="#58d6c5" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<g filter="url(#sh)"><path d="M55.0 1126 Q380.0 1107 705.0 1126 L705.0 1190 Q380.0 1209 55.0 1190Z" fill="#173342" stroke="#4b8190" stroke-width="2"/><ellipse cx="380.0" cy="1126" rx="325.0" ry="14" fill="#1d4050" stroke="#58d6c5" stroke-width="2"/></g>
+<text x="380.0" y="1150" text-anchor="middle" fill="#f0f6fa" font-family="Arial,sans-serif" font-size="23" font-weight="700">Gold Delta</text>
+<text x="380.0" y="1179" text-anchor="middle" fill="#b6c6d1" font-family="Arial,sans-serif" font-size="16">Curated analytical datasets</text>
+<text x="695" y="1132" text-anchor="end" fill="#76cfc4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DATA STORE</text>
+</svg>
